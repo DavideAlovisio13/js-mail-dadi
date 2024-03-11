@@ -1,64 +1,106 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Sofadi One", system-ui;
-    color: white;
-}
-.app h1 {
-    color: white;
-}
-
-li {
-    padding: 5px;
-    font-size: 1.5em;
-}
-
-.box_game {
-    width: 100%;
-}
-
-.box_game img {
-    width: 100%;
-    height: 300px;
-    z-index: 100;
-}
-
-.transition_box {
-    animation: slide-out 7s;
-}
-
-@keyframes slide-out {
-   from {
-        transform: translateY(-135px);
-    }
-    to {
-        transform: translateY(0px);
-    }
-}
-
-.transition_box1 {
-    animation: slide-in 7s;
-}
-
-@keyframes slide-in {
-    from{
-        transform: translateY(135px);
-    }
-    to{
-        transform: translateY(0px);
-    }
-    
+  font-family: "Sofadi One", system-ui;
+  color: white;
 }
 
 .app {
-    background-image: url('../img/pexels-pixabay-326333.jpg');
-    background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+.app h1 {
+  color: white;
+  font-size: 50px;
+}
+
+li {
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.box_game {
+  width: 100%;
+}
+
+.box_game img {
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+}
+
+.transition_box {
+  animation: slide-out 7s;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(-135px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.transition_box1 {
+  animation-name: horizontal-shaking;
+  animation-duration: 10s;
+  animation-delay: 10s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(135px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.app {
+  background-image: url("../img/pexels-pixabay-326333.jpg");
+  background-size: cover;
+}
+
+.tilt {
+  animation: horizontal-shaking 0.2s infinite;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.die {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 100px;
 }

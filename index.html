@@ -14,17 +14,17 @@
 </head>
 
 <body>
+    <audio autoplay loop src="./audio/Jumanji Soundtrack - Jumanji Theme (1).mp3"></audio>
     <!-- primo contenitore per esercizio 1 -->
-
     <div class="app min-vh-100  container-fluid d-flex flex-column justify-content-between">
         <div class="w-100 box_game transition_box1">
             <img src="img/wp2332437_1.jpg" alt="box1">
         </div>
         <div class="container d-flex flex-column align-items-center" id="access">
-            <h1>Accedi a JumanjiQuest </h1>
-            <p>Inserisci i tuoi dati e-mail:</p>
+            <h1 class="text-white  p-5 ">Accedi a JumanjiQuest </h1>
+            <p class="fs-5">Inserisci i tuoi dati e-mail:</p>
             <input type="email" id="emailinput">
-            <button class="btn-secondary m-3 submitbtn">Verifica Accesso</button>
+            <button class="btn-secondary m-3 submitbtn p-2 fs-6 mt-5">Verifica Accesso</button>
             <p id="messagexuser"></p>
         </div>
         <div class="w-100 box_game transition_box">
@@ -33,25 +33,27 @@
     </div>
 
     <!-- secondo contenitore per esercizio 2 -->
-    <div class="app container-fluid vh-100 d-flex justify-content-center align-items-center">
-        <div class="container d-flex flex-column  align-items-center">
-            <h2>Benvenuto in JumanjiQuest </h2>
-            <h3 class="text-danger">Attenzione!!!</h3>
+    <div class="app container-fluid vh-100 d-flex justify-content-center align-items-center ">
+        <div class="container d-flex flex-column  align-items-center titl-e">
+            <h2 class="fs-1">Benvenuto in JumanjiQuest </h2>
+            <h3 class="text-danger titl-e">Attenzione!!!</h3>
             <p>Se deciderete di premere il pulsante sappiate che affiderete il vostro destino ai dadi!... 3 sono i
                 possibili scenari:
+            </p>
             <ol>
-                <li>Se il vostro risultato è maggiore del risultato del computer: in questo caso potete rilassarvi e
+                <li class="titl-e">Se il vostro risultato è maggiore del risultato del computer: in questo caso potete
+                    rilassarvi e
                     godervi la vittoria!</li>
-                <li>Se il vostro risultato è minore di quello del computer...behh... non mi riterrò personalmente responsabile per
+                <li class="titl-e">Se il vostro risultato è minore di quello del computer...behh... non mi riterrò
+                    personalmente responsabile per
                     smaterializzazioni improvvise ed eventuali incontri con rinoceronti giganti o piante carnivore.
                     Prendetene atto: era scritto nelle piccole righe del contratto invisibile!
                 </li>
-                <li>Nel caso in cui il risultati siano identici, sarete comunque costretti a ritirare!
+                <li class="titl-e">Nel caso in cui il risultati siano identici, sarete comunque costretti a ritirare!
                 </li>
             </ol>
-            </p>
-            <button class="btn-secondary m-3 playgame">Gioca!</button>
-            <p id="result"></p>
+            <button class="btn-secondary m-3 playgame titl-e">Gioca!</button>
+            <p id="result" class="titl-e fs-1"></p>
         </div>
     </div>
 

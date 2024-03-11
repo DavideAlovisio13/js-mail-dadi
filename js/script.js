@@ -75,7 +75,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 // fatto ciò, richiamiamo in una variabile il pulsante
-userPlayBtn = document.querySelector('.playgame');
+let userPlayBtn = document.querySelector('.playgame');
 // inseriamo una funzione con un ascoltatore che controlli il bottone e al click faccia capitare qualcosa
 userPlayBtn.addEventListener('click', function() {
     // inseriamo le due variabili contenenti il numero assegnato al computer e all'utente
@@ -93,10 +93,15 @@ userPlayBtn.addEventListener('click', function() {
         winnerG = 'Congratulazioni! Per questa volta non verrai mangiato!! il tuo punteggio è: ' + userNum + ', mentre quello del computer è: ' + computerNum +'!';
     } else if(computerNum > userNum) {
         winnerG = 'Hai perso! Il computer ti ha battuto con un punteggio di: ' + computerNum + ' a ' + userNum + ' E adesso, Tieniti forte!!';
+        fallUser = document.getElementsByClassName('titl-e');
+            for (let i = 0; i < fallUser.length; i++) {
+                fallUser[i].classList.add('tilt');
+        }
     } else {
         winnerG = 'GULP! Pareggio...ritira!';
     } 
     //comunico all'utente il risultato  scrivendolo nell'html
     document.getElementById('result').innerHTML = winnerG;
+    
 
 })  
