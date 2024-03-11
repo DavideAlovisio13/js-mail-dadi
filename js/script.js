@@ -27,11 +27,11 @@ P.S Dadi
 
 // 1 === MAIL
 
-// dichiariamo una nuova variabile dove andremo a rchiamare il bottone 
+// dichiariamo una nuova variabile dove andremo a richiamare il bottone 
 
 const submitBtn = document.querySelector('.submitbtn')
 
-// inziamo una funzione dove inseriamo un ascoltatore che al click del bottone confronti e controlli i dati inseriti
+// inseriamo una funzione con un ascoltatore che al click del bottone faccia succedere qualcosa
 submitBtn.addEventListener('click', function() {
 
     // creiamo un Array contenente le mail di chi può accedere 
@@ -46,7 +46,7 @@ submitBtn.addEventListener('click', function() {
     // creiamo una variavile contenente il valore inserito dall'utente tramite imput
     let userValue = document.getElementById('emailinput').value;
 
-    // creiamo una variabile booleana per controllare se l'utente può accedere oppure no
+    // creiamo una variabile booleana con valore 'false' , che ci servirà per controllora se l'accesso è consentito oppure no
     let accessAllowed = false;
 
     // controlliamo, a questo putno, che l'utente possa accedere
@@ -66,4 +66,37 @@ submitBtn.addEventListener('click', function() {
         }
 })
 
+
+
 // 2 === gioco dei dadi 
+
+// inseriamo la funzione getRndIntegezer, per generare numeri randomici da un minimo a un massimo valore che per adesso non è ancora definito
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// fatto ciò, richiamiamo in una variabile il pulsante
+userPlayBtn = document.querySelector('.playgame');
+// inseriamo una funzione con un ascoltatore che controlli il bottone e al click faccia capitare qualcosa
+userPlayBtn.addEventListener('click', function() {
+    // inseriamo le due variabili contenenti il numero assegnato al computer e all'utente
+    let userNum = getRndInteger(1, 6);
+    let computerNum = getRndInteger(1, 6);
+    // inseriamo poi la variabile vuota nella quale verra inserito il vincitore 
+    let = winnerG = '';
+    /*
+    aggiungiamo poi una condizione:
+    - (if)se il numero dell'utente è maggiore del numero del computer, allore  riempiamo la variabile winnerG con un messaggio
+    - (if else) se invece, il numero del computer è maggiore del numero dell'utente, allore  riempiamo la variabile winnerG con un'altro messaggio
+    - (else) altrimenti inseriamo nella variabile winnerG il messaggio di pareggio.
+    */ 
+    if(userNum > computerNum) {
+        winnerG = 'Congratulazioni! Per questa volta non verrai mangiato!! il tuo punteggio è: ' + userNum + ', mentre quello del computer è: ' + computerNum +'!';
+    } else if(computerNum > userNum) {
+        winnerG = 'Hai perso! Il computer ti ha battuto con un punteggio di: ' + computerNum + ' a ' + userNum + ' E adesso, Tieniti forte!!';
+    } else {
+        winnerG = 'GULP! Pareggio...ritira!';
+    } 
+    //comunico all'utente il risultato  scrivendolo nell'html
+    document.getElementById('result').innerHTML = winnerG;
+
+})  
