@@ -9,11 +9,16 @@ html {
 }
 
 body {
-    position: relative;
     font-family: "Sofadi One", system-ui;
+    color: white;
 }
 .app h1 {
-    mix-blend-mode: hard-light;
+    color: white;
+}
+
+li {
+    padding: 5px;
+    font-size: 1.5em;
 }
 
 .box_game {
@@ -22,7 +27,7 @@ body {
 
 .box_game img {
     width: 100%;
-    position: relative;
+    height: 300px;
     z-index: 100;
 }
 
@@ -32,7 +37,7 @@ body {
 
 @keyframes slide-out {
    from {
-        transform: translateY(-242px);
+        transform: translateY(-135px);
     }
     to {
         transform: translateY(0px);
@@ -45,7 +50,7 @@ body {
 
 @keyframes slide-in {
     from{
-        transform: translateY(242px);
+        transform: translateY(135px);
     }
     to{
         transform: translateY(0px);
