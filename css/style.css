@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: "Sofadi One", system-ui;
+}
+.app h1 {
+    mix-blend-mode: hard-light;
+}
+
+.box_game {
+    width: 100%;
+}
+
+.box_game img {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.transition_box {
+    animation: slide-out 7s;
+}
+
+@keyframes slide-out {
+   from {
+        transform: translateY(-242px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.transition_box1 {
+    animation: slide-in 7s;
+}
+
+@keyframes slide-in {
+    from{
+        transform: translateY(242px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
+.app {
+    background-image: url('../img/pexels-pixabay-326333.jpg');
+    background-size: cover;
+}
